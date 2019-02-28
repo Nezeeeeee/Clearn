@@ -28,4 +28,6 @@ int main(){
 	for(i = 0; i < 93; i++){
 		printf("%d ", indigit[i]);
 	}
+
+	printf("Конец программы!");
 }
