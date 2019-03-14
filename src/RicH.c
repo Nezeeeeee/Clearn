@@ -1,33 +1,18 @@
 #include <stdio.h>
 
+int FarToCel (int far);
+
+
 
 int main(){
-	int i,c;
-	int indigit[93];
+	int i;
+	for(i  = 0; i < 300; i += 20)
+		FarToCel(i);
+}
 
-	for(i = 0; i<93; i++){
-		indigit[i] = 0;
-	}
 
-	while((c = getchar()) != EOF){
-		if(c > 32 && c < 127)
-		++indigit[c - 33];
-	}
 
-	printf("Счетчик символов:\n");
+int FarToCel(int far){
+		printf("%3d %6.1f\n",far, (5.0/9.0)*(far - 32));
 
-	for(i= 0; i < 93; i++){
-		if(indigit[i] > 9)
-			printf("%c  ", i+33);
-		else
-			printf("%c ", i+33);
-	}
-
-	printf("\n");
-
-	for(i = 0; i < 93; i++){
-		printf("%d ", indigit[i]);
-	}
-
-	printf("Конец программы!");
 }
